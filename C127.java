@@ -31,4 +31,16 @@ public class Main {
 最終的に、カウントされた顧客の数が出力されます。
 
 
+
+
+Map.Entry<String, Integer> entry : customerMap.entrySet()
+
+Map内のエントリー(key-valueペア)を1つずつ処理するためのループです。
+customerMapは、StringキーとInteger値の両方を持つMapです。
+entrySet()メソッドを使用することで、マップ内の各キーと値のペアを含むSetを返します。
+
+ループの中で、変数 'entryには、Map.Entryオブジェクトが格納されます。
+このオブジェクトには、Map内の1つのエントリーのキーと値が含まれます。
+entrySet()メソッドを使用して、すべてのエントリーにアクセスし、各エントリーをループで処理することができます。
+
 */
