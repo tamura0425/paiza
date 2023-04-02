@@ -42,6 +42,29 @@ forループが終了したら、totalLengthを出力します。
 
 このプログラムのアルゴリズムは、渋滞している区間の長さを求めるために、車と車の間の距離を順番に読み取って、現在の車と前の車の距離を足して、m未満である場合に渋滞している区間の長さに加算していくというものです。
 
+以下がフローチャートになります。
 
+プレーン テキスト
+Copy code
+開始
+入力：車の数 n, 渋滞を定義する整数 m
+total = 0
+prevCarDistance = 車と車の間の距離（先頭の車と2番目の車の間の距離）
+for i = 1 から n-1 まで:
+    currCarDistance = 車と車の間の距離（先頭の車と2番目の車の間の距離以外の距離）
+    if prevCarDistance + currCarDistance < m:
+        total += currCarDistance
+    prevCarDistance = currCarDistance
+出力：total
+終了
+上記のフローチャートを読み取ると、次のような処理が行われます。
+
+車の数 n と渋滞を定義する整数 m を入力します。
+渋滞の区間の合計長を格納する変数 total を 0 に初期化します。
+先頭の車と2番目の車の間の距離を prevCarDistance に格納します。
+先頭の車と2番目の車の間の距離以外の距離をループで取得し、currCarDistance に格納します。
+prevCarDistance と currCarDistance の合計が m 未満の場合、currCarDistance を渋滞の区間の合計長に加算します。
+2つの車間距離を更新し、ループを継続します。
+最後に、渋滞の区間の合計長を出力します。
 
 
